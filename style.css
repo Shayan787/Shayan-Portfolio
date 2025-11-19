@@ -1,0 +1,496 @@
+Body {
+    margin: 0px;
+    padding: 0px;
+     background-color:#003049;
+    color: azure;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ nav{
+    background: rgba( 0,0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+ }
+ header{
+    height: 40vh;
+ }
+
+ nav a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: aliceblue;
+    margin-right: 20px;
+}
+.intro{
+    position: absolute;
+    top: 4cm;
+    left: 1.5cm;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.head-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    right: 2%;
+    top: 2.5cm;
+}
+.About{
+    margin-top: 8cm;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    background: rgba( 0,0, 0, 0.4);
+}
+.About img{
+    margin-top: 0.2cm;
+    border: 5px solid white;
+    border-radius: 20%;
+    position: absolute;
+    left: 1%;
+    margin-left: 1cm;
+}
+.About p{
+    margin-top: 65px;
+    width: 55%;
+    margin-left: 10cm;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+#AboutmeHeading {
+    position: absolute;
+    margin-top: 310px;
+    left: 57%;
+    
+}
+.skills{
+    display: flex;
+}
+.card{
+    border: 2px solid white;
+    width: 20%;
+    height: 280px;
+    text-align: center;
+    background: rgba( 0,0, 0, 0.4);
+    margin-left: 8%;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+
+}
+.card img{
+    width: 100%;
+    
+}
+.skillsheading{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+}
+.cvdownloadbutton{
+    padding: 10px;
+    background-color: white;
+    color:black;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+#Projects {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    padding: 20px;
+}
+.projectheading{
+    margin-top: 4cm;
+    margin-left: 44%;
+}
+
+.project-card {
+    border: 5px solid white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.project-card h2 {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===================== Testimonial Section ===================== */
+.testimonial-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3cm;
+}
+
+.testimonials {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.testimonial-card {
+    width: 80%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 3px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.testimonial-card h3 {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* ===================== Contact Section ===================== */
+.contact-heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 3cm;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    width: 45%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-info {
+    width: 40%;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 3px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-info span {
+    font-weight: bold;
+}
+
+/* ====================== ANIMATION SYSTEM ====================== */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes fadeFromRight {
+    0% { opacity: 0; transform: translateX(120px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeFromLeft {
+    0% { opacity: 0; transform: translateX(-120px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeFromBottom {
+    0% { opacity: 0; transform: translateY(120px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeFromTop {
+    0% { opacity: 0; transform: translateY(-120px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.fade-right {
+    animation: fadeFromRight 1.6s ease-out forwards;
+}
+
+.fade-left {
+    animation: fadeFromLeft 1.6s ease-out forwards;
+}
+
+.fade-up {
+    animation: fadeFromBottom 1.6s ease-out forwards;
+}
+
+.fade-down {
+    animation: fadeFromTop 1.6s ease-out forwards;
+}
+/* ================================
+   RESPONSIVE DESIGN MEDIA QUERIES
+   ================================ */
+
+/* ---------- TABLETS (max-width: 992px) ---------- */
+@media (max-width: 992px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .intro {
+        left: 1cm;
+        top: 3cm;
+    }
+
+    .head-img {
+        width: 35%;
+        right: 5%;
+        top: 4cm;
+    }
+
+    /* About section */
+    .About {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+    .About img {
+        position: static;
+        width: 40%;
+        margin: 0;
+    }
+    .About p {
+        width: 90%;
+        margin: 20px 0 0 0;
+        font-size: 18px;
+    }
+
+    #AboutmeHeading {
+        position: static;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    /* Skill cards */
+    .skills {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 40%;
+        margin: 20px;
+    }
+
+    /* Projects heading */
+    .projectheading {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Contact section */
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info,
+    .contact-form {
+        width: 80%;
+    }
+}
+
+
+/* ---------- MOBILE LANDSCAPE (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+    .intro {
+        left: 20px;
+        top: 2.5cm;
+    }
+
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .head-img {
+        width: 40%;
+        top: 3.5cm;
+    }
+
+    /* Skills */
+    .card {
+        width: 60%;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        width: 90%;
+    }
+
+    /* Contact area */
+    .contact-info, .contact-form {
+        width: 90%;
+    }
+}
+
+
+/* ---------- MOBILE PORTRAIT (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+
+    nav {
+        padding: 10px;
+    }
+    nav .links a {
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .intro {
+        position: static;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .head-img {
+        position: static;
+        display: block;
+        margin: 20px auto;
+        width: 60%;
+    }
+
+    /* About section */
+    .About img {
+        width: 65%;
+    }
+    .About p {
+        font-size: 16px;
+    }
+
+    /* Skills */
+    .card {
+        width: 80%;
+    }
+
+    /* Project grid */
+    #Projects {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-info, .contact-form {
+        width: 95%;
+    }
+}
+
+
+/* ---------- SMALL PHONES (max-width: 430px) ---------- */
+@media (max-width: 430px) {
+
+    nav .links a {
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+
+    .intro h1 {
+        font-size: 1.4rem;
+    }
+
+    .cvdownloadbutton {
+        padding: 8px;
+    }
+
+    .head-img {
+        width: 70%;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .testimonial-card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .contact-info p,
+    .contact-info span {
+        font-size: 1rem;
+    }
+}
+

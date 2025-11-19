@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Shayan Ali</div>
+            <div class="links">
+        <a href="#">Home</a>
+        <a href="#AboutmeHeading">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#testimonials">Testimonial</a>
+        <a href="#contact">Contact</a>
+        </div>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <h3>Hi There,</h3>
+        <h1>I am Shayan Ali</h1>
+        <h1>Frontend Web Developer</h1>
+        <a href="#" class="cvdownloadbutton"> Download CV</a>
+    </div>
+
+    <!-- First Image Animation -->
+    <img src="My Pic.png" alt="" width="30%" class="head-img" data-anim="fade-right">
+
+    <h1 id="AboutmeHeading">About Me</h1>
+    <section class="About">
+       <img src="My Pic.png" width="25%" data-anim="fade-left">
+       <p data-anim="fade-up">
+        Hi, I'm a Frontend Web Developer with a passion for crafting responsive, user-friendly websites. I specialize in building modern, accessible, and performance-optimized web interfaces using HTML, CSS, and JavaScript.
+        Whether it's bringing a design to life with pixel-perfect precision or creating dynamic user experiences, I enjoy turning ideas into interactive digital products. I focus on writing clean, maintainable code and staying up to date with best practices in frontend development.
+        I’m always looking to grow as a developer and take on new challenges that push my creativity and problem-solving skills.
+       </p>
+    </section>
+
+    <h2 class="skillsheading">Skills</h2>
+    <section class="skills">
+        <div class="card" data-anim="fade-up">
+            <img src="html.png">
+            <h2>HTML</h2>
+        </div>
+        <div class="card" data-anim="fade-up">
+            <img src="css-removebg-preview.png">
+            <h2>CSS</h2>
+        </div>
+        <div class="card" data-anim="fade-up">
+            <img src="javalogo-removebg-preview.png">
+            <h2>JAVASCRIPT</h2>
+        </div>
+    </section>
+
+    <h1 class="projectheading">Projects</h1>
+<section id="Projects">
+  <div class="project-card" data-anim="fade-up">
+    <a href="https://shayan787.github.io/sa-perfumes/" style="text-decoration: none; color: aliceblue;">
+      <img src="website banner.png" alt="SA Perfumes">
+      <h2>SA Perfumes</h2>
+    </a>
+  </div>
+
+  <div class="project-card" data-anim="fade-up">
+    <a href="https://shayan787.github.io/simple-calculator/" style="text-decoration: none; color: aliceblue;">
+      <img src="calculator website preview.png" alt="Simple Calculator">
+      <h2>Simple Calculator</h2>
+    </a>
+  </div>
+
+  <div class="project-card" data-anim="fade-up">
+    <a href="https://shayan787.github.io/SHAYAN-RENTALS/index.html" style="text-decoration: none; color: aliceblue;">
+      <img src="Car Rental Website Preview.png" alt="Shayan Rentals">
+      <h2>Shayan Rentals</h2>
+    </a>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIAL SECTION ===================== -->
+<h1 class="testimonial-heading">Testimonials</h1>
+<section class="testimonials" id="testimonials">
+
+  <div class="testimonial-card" data-anim="fade-up">
+    <p>
+      "Shayan is a skilled frontend developer! He created a clean,
+      responsive website for my business and delivered it exactly on time.
+      Highly recommended!"
+    </p>
+    <h3>- Daniyal Khaskheli</h3>
+  </div>
+
+  <div class="testimonial-card" data-anim="fade-up">
+    <p>
+      "Very professional and talented. His attention to detail is amazing.
+      I was impressed with the UI animations and responsiveness."
+    </p>
+    <h3>- Muhhamad Khan Khoso</h3>
+  </div>
+
+  <div class="testimonial-card" data-anim="fade-up">
+    <p>
+      "Great communication and even better results! I’ll definitely work
+      with him again for future projects."
+    </p>
+    <h3>- Kashif Khoso</h3>
+  </div>
+
+</section>
+
+<!-- ===================== CONTACT SECTION ===================== -->
+<h1 class="contact-heading">Contact Me</h1>
+<section class="contact" id="contact">
+
+  <form class="contact-form" data-anim="fade-up">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+  </form>
+
+  <div class="contact-info" data-anim="fade-left">
+      <h2>Get in Touch</h2>
+      <p>Email: <span>shayanaliqazi@outlook.com</span></p>
+      <p>Location: <span>Pakistan</span></p>
+      <p>Portfolio: <span>shayanali.com</span></p>
+  </div>
+
+</section>
+
+<!-- ====================== CUSTOM SCROLL ANIMATION JS ====================== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-anim]");
+
+    elements.forEach(el => {
+        el.classList.add("animate-on-scroll");
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const effect = entry.target.getAttribute("data-anim");
+                entry.target.classList.add(effect);
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
